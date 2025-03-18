@@ -1,0 +1,29 @@
+import pyautogui as troll
+import time
+import random
+
+# Define a list of random messages
+messages = [
+    "Hello!", 
+    "How are you?", 
+    "What's up?", 
+    "Have a great day!", 
+    "Stay positive!", 
+    "Let's catch up soon!", 
+    "Keep smiling!", 
+    "Hope you're doing well!", 
+    "Take care!", 
+    "Cheers!"
+]
+
+limit = input("Enter the number of messages: ")
+
+i = 0
+time.sleep(2)
+
+# Loop to send random messages
+while i < int(limit):
+    msg = random.choice(messages)  # Choose a random message from the list
+    troll.typewrite(msg)
+    troll.press("Enter")
+    i += 1
